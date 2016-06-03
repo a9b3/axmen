@@ -1,4 +1,12 @@
 // dev environment
-const mod = require('../lib/index.js').default
+const axmen = require('../lib/index.js').default
 
-mod.log('hi')
+axmen.configure({
+  namespace: 'Test',
+})
+const test = {
+  a: {
+    name: 'sam',
+  },
+}
+axmen.log('hi', 'what', `hihi`, test)

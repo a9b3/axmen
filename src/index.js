@@ -20,11 +20,13 @@ class Logger {
   log(...args) {
     if (!this.enable) return
 
-    const str = this.namespace && chalk.blue(`[${this.namespace}]`)
-      + this.showEnv && env && chalk.blue(`[env: ${env}]`)
+    const prepend = [
+      this.namespace && chalk.blue(`[${this.namespace}]`),
+      this.showEnv && env && chalk.blue(`[env=${env}]`),
+    ].filter(a => a)
 
+    args = prepend.concat(args)
     console.log(
-      str,
       ...args,
     )
   }
