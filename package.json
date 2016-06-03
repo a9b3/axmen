@@ -1,7 +1,7 @@
 {
-  "name": "starter-deck_js-module",
+  "name": "axmen",
   "version": "0.0.1",
-  "description": "Starter-deck for a js module using babel to enable writing in es2015.",
+  "description": "Log stuff ye.",
   "main": "lib/index.js",
   "scripts": {
     "start": "nodemon --watch example --watch src ./example/index.js & babel src --out-dir lib --watch",
